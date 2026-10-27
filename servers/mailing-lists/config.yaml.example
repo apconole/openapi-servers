@@ -1,0 +1,20 @@
+# Mailing lists MCP server configuration (for sync.py --config)
+#
+# db:     SQLite database path (default: ~/.mailing-lists-mcp/lists.db,
+#         also settable via the MLIST_DB environment variable)
+# lists:  one entry per mailing list; each needs a name and either a local
+#         path (mbox file or directory of mbox / mbox.gz files) or a URL
+#         pointing at a (gzipped) mbox archive.
+
+db: ~/.mailing-lists-mcp/lists.db
+
+lists:
+  - name: xorg-devel
+    description: X.org development mailing list
+    url: https://lists.example.org/archives/xorg.mbox.gz
+
+  - name: lkml
+    path: /srv/archives/lkml          # directory of *.mbox / *.mbox.gz files
+
+  - name: some-announce
+    path: ~/archives/some-announce.mbox.gz
